@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 const projects = [
   {
     title: "Property Listing Platform",
-    image: "/property.png",
+    image: "property.png",
     description: "A full-stack real estate platform for buying, selling, and renting properties.",
     tech: "React, Node.js, MongoDB, Tailwind CSS",
     github: "https://github.com/StutiSharan/Stuti-Repo/tree/main/Property%20Listing",
@@ -12,7 +12,7 @@ const projects = [
   },
   {
     title: "MemeHub- Joke Junction",
-    image: "/meme.png",
+    image: "meme.png",
     description: "Generate and share memes with others using templates and create own templates.",
     tech: "React, Tailwind CSS, firebase RealtimeDB",
     github: "https://github.com/StutiSharan/MemeHub-Project-",
@@ -20,7 +20,7 @@ const projects = [
   },
   {
     title: "Voting System",
-    image: "/votingapp.png",
+    image: "votingapp.png",
     description: "Secure online voting platform with real-time results.",
     tech: "React, Tailwind CSS, Firebase Realtime DB",
     github: "https://github.com/StutiSharan/voting-system",
@@ -28,7 +28,7 @@ const projects = [
   },
   {
     title: "Community Platform",
-    image: "/community.png",
+    image: "community.png",
     description: "User can join Community based on their Interest also users can post anything,do like and comments on other's post.",
     tech: "HTML, CSS, Javascript, Firebase , LocalStorage",
     github: "https://github.com/StutiSharan/community-Platform",
