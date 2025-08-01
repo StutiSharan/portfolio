@@ -20,7 +20,7 @@ const projects = [
   },
   {
     title: "Voting System",
-    image: "/voting app.png",
+    image: "/votingapp.png",
     description: "Secure online voting platform with real-time results.",
     tech: "React, Tailwind CSS, Firebase Realtime DB",
     github: "https://github.com/StutiSharan/voting-system",
@@ -28,7 +28,7 @@ const projects = [
   },
   {
     title: "Community Platform",
-    image: "/community 1.png",
+    image: "/community.png",
     description: "User can join Community based on their Interest also users can post anything,do like and comments on other's post.",
     tech: "HTML, CSS, Javascript, Firebase , LocalStorage",
     github: "https://github.com/StutiSharan/community-Platform",
