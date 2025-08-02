@@ -15,7 +15,7 @@ const Navbar = () => {
             link === 'Resume' ? (
               <a
                 key={link}
-                href="/resume.pdf"
+                href="/portfolio/resume.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="hover:text-cyan-400 text-white transition-colors duration-200"
