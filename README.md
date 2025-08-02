@@ -3,11 +3,17 @@ This is my personal portfolio website built using React, Vite, and Tailwind CSS.
 
 ## 🔥 Features
 ⚡ Fast and modern UI with React + Vite
+
 🎨 Tailwind CSS for responsive, utility-first styling
+
 🌐 GitHub Projects with live links and repo buttons
+
 📊 GitHub Stats and Contribution Calendar
+
 💼 Downloadable Resume
+
 ☎️ Contact Section with Email, Phone, and Social links
+
 🧭 Smooth navigation and sticky navbar
 
 ## 🚀 Live Demo
