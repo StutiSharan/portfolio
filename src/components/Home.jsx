@@ -91,7 +91,7 @@ for (let tech of techStack) {
       whileHover={{ scale: 1.05 }}
       whileTap={{ scale: 0.95 }}
     >
-      📄 Download Resume
+      📄 Resume
     </motion.a>
 
     {/* Tech Stack Icons */}

@@ -7,6 +7,7 @@ import Projects from './components/Projects';
 import Contact from './components/Contact';
 import Home from './components/Home';
 import GitHubStats from './components/GitHubStats';
+import Footer from './components/Footer';
 
 function App() {
   return (
@@ -38,6 +39,10 @@ function App() {
 
       <section id="resume">
         <a href="/resume.pdf"></a>
+      </section>
+
+      <section id='Footer'>
+      <Footer/>
       </section>
     </div>
   );

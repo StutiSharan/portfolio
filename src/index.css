@@ -2,3 +2,15 @@
 html {
   scroll-behavior: smooth;
 }
+.glow-text {
+  animation: glow 3s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+  from {
+    text-shadow: 0 0 4px #0ff, 0 0 8px #0ff, 0 0 12px #0ff;
+  }
+  to {
+    text-shadow: 0 0 8px #0ff, 0 0 12px #0ff, 0 0 16px #0ff;
+  }
+}
