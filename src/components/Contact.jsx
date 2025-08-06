@@ -1,6 +1,46 @@
-import React from "react";
+import React, { useState } from "react";
+import emailjs from "@emailjs/browser";
 
 const Contact = () => {
+  const [showPopup, setShowPopup] = useState(false);
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    const form = e.target;
+    const name = form.name.value.trim();
+    const email = form.email.value.trim();
+    const message = form.message.value.trim();
+
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    const namePattern = /^[A-Za-z\s]{2,}$/;
+
+    if (!namePattern.test(name)) {
+      alert("Please enter a valid name (only letters, min 2 characters).");
+      return;
+    }
+
+    if (!emailPattern.test(email)) {
+      alert("Please enter a valid email address.");
+      return;
+    }
+
+    emailjs
+      .sendForm(
+        "service_r2az4r5",
+        "template_ohk0t0s",
+        form,
+        "p-5Wr3jJghLiaooZ_"
+      )
+      .then(() => {
+        form.reset();
+        setShowPopup(true);
+      })
+      .catch((error) => {
+        alert("Failed to send. Please try again later.\n" + error.text);
+      });
+  };
+
   return (
     <section
       id="contact"
@@ -11,19 +51,10 @@ const Contact = () => {
           Contact Me
         </h2>
 
-        {/* 📬 Contact Form (FormSubmit) */}
         <form
-          action="https://formsubmit.co/stutisharan0@gmail.com"
-          method="POST"
+          onSubmit={handleSubmit}
           className="bg-gray-800 p-6 rounded-lg shadow-lg max-w-xl mx-auto"
         >
-          {/* Optional hidden settings for FormSubmit */}
-          <input type="hidden" name="_captcha" value="false" />
-          <input type="hidden" name="_template" value="box" />
-          <input type="text" name="_honey" style={{ display: "none" }} />
-          {/* Optional redirect (you can change this) */}
-          {/* <input type="hidden" name="_next" value="https://yourdomain.com/thank-you" /> */}
-
           <input
             type="text"
             name="name"
@@ -53,7 +84,23 @@ const Contact = () => {
           </button>
         </form>
 
-        {/* 🔗 Links */}
+        {/* Success Popup */}
+        {showPopup && (
+          <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50">
+            <div className="bg-white text-gray-800 p-6 rounded-lg shadow-lg relative max-w-xs w-full">
+              <button
+                className="absolute top-2 right-3 text-gray-500 hover:text-red-600 text-xl font-bold"
+                onClick={() => setShowPopup(false)}
+              >
+                &times;
+              </button>
+              <h3 className="text-lg font-semibold mb-2">Message Sent ✅</h3>
+              <p>Thank you! Your message has been sent successfully.</p>
+            </div>
+          </div>
+        )}
+
+        {/* Contact Links */}
         <div className="flex justify-center gap-4 mt-10 flex-wrap">
           <a
             href="mailto:stutisharan0@gmail.com"
