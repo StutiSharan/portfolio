@@ -24,7 +24,7 @@ const GitHubStats = () => (
         Contribution Heatmap
       </h3>
       <img
-        src="https://ghchart.rshah.org/StutiSharan"
+        src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=StutiSharan&theme=default"
         alt="GitHub chart"
         className="mx-auto w-full max-w-3xl border border-[#1E293B] rounded-lg p-4 bg-[#1E293B]"
       />
