@@ -84,15 +84,28 @@ for (let tech of techStack) {
     </motion.p>
 
     {/* Resume Button */}
-    <motion.a
-      href="/portfolio/resume.pdf"
-      download="Stuti_resume.pdf"
-      className="inline-block mt-6 px-6 py-3 rounded-full bg-[#38BDF8] text-[#0F172A] font-semibold hover:bg-[#0ea5e9] transition-colors duration-300 shadow-lg z-10"
-      whileHover={{ scale: 1.05 }}
-      whileTap={{ scale: 0.95 }}
-    >
-      📄 Resume
-    </motion.a>
+   <motion.a
+  href="/portfolio/resume.pdf"
+  target="_blank"
+  rel="noopener noreferrer"
+  onClick={(e) => {
+    e.preventDefault();
+    // Open in new tab
+    window.open("/portfolio/resume.pdf", "_blank");
+    // Trigger download
+    const link = document.createElement("a");
+    link.href = "/portfolio/resume.pdf";
+    link.download = "Stuti-Sharan-Resume.pdf";
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  }}
+  className="inline-block mt-6 px-6 py-3 rounded-full bg-[#38BDF8] text-[#0F172A] font-semibold hover:bg-[#0ea5e9] transition-colors duration-300 shadow-lg z-10"
+  whileHover={{ scale: 1.05 }}
+  whileTap={{ scale: 0.95 }}
+>
+  📄 Resume
+</motion.a>
 
     {/* Tech Stack Icons */}
     <motion.div

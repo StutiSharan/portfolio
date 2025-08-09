@@ -29,12 +29,15 @@ const Skills = () => {
   return (
     <section className="py-16 bg-gray-900 text-white" id="skills">
       <div className="container mx-auto px-6">
-        <h2 className="text-4xl font-bold text-center mb-12 text-cyan-400">Tech Stack & Tools</h2>
+        <h2 className="text-4xl font-bold text-center mb-12 text-cyan-400">
+          Tech Stack & Tools
+        </h2>
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6 justify-items-center">
           {skills.map((skill, index) => (
             <div
               key={index}
-              className="flex flex-col items-center p-4 bg-gray-800 rounded-xl shadow-lg hover:scale-105 transform transition duration-300 ease-in-out hover:shadow-cyan-500/40"
+              className="flex flex-col items-center justify-center p-4 bg-gray-800 rounded-xl shadow-lg hover:scale-105 transform transition duration-300 ease-in-out hover:shadow-cyan-500/40"
+              style={{ width: '120px', height: '120px' }} // Equal width & height
             >
               <div className="mb-2 text-cyan-400">{skill.icon}</div>
               <p className="text-sm font-semibold">{skill.name}</p>
