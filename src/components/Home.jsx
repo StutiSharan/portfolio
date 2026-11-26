@@ -1,5 +1,5 @@
 import React from "react";
-import profile from "../assets/profile.jpg";
+import profile from "../assets/newProfile.jpeg";
 import { motion } from "framer-motion";
 import { Typewriter } from "react-simple-typewriter";
 import { SiReact, SiTailwindcss, SiNodedotjs, SiMongodb } from "react-icons/si";
